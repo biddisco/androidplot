@@ -8,3 +8,5 @@
 
 build/
 .gradle
+AndroidPlot-Core/bin/
+AndroidPlot-Core/gen/com/androidplot/BuildConfig.java
