@@ -17,7 +17,6 @@
 package com.androidplot.pie;
 
 import android.graphics.*;
-import android.util.Log;
 
 import com.androidplot.exception.PlotRenderException;
 import com.androidplot.ui.SeriesRenderer;
@@ -185,18 +184,15 @@ public class PieRenderer extends SeriesRenderer<PieChart, Segment, SegmentFormat
     	int newX = (int) (origin.x - bounds.width() / 2.0f);
     	int newY = (int) (origin.y + bounds.height() / 2.0f);
     	
-    	Log.i("mmd", String.format("Drawing label \"%s\" at %d,%d (adjusted to %d,%d)", seg.getTitle(), (int) origin.x, (int) origin.y, newX, newY));
-    	
         canvas.drawText(seg.getTitle(), newX, newY, f.getLabelPaint());
 
-        // Show dots where the origin and adjusted position are:
+        // Show dots where the origin and adjusted position are for testing.
         
-    	Paint tempPaint = new Paint();
-    	tempPaint.setColor(Color.BLUE);
-    	canvas.drawCircle(newX, newY, 5.0f, tempPaint);
-    	tempPaint.setColor(Color.RED);
-//    	
-    	canvas.drawCircle(origin.x, origin.y, 5.0f, tempPaint);
+//    	Paint tempPaint = new Paint();
+//    	tempPaint.setColor(Color.BLUE);
+//    	canvas.drawCircle(newX, newY, 5.0f, tempPaint);
+//    	tempPaint.setColor(Color.RED);
+//    	canvas.drawCircle(origin.x, origin.y, 5.0f, tempPaint);
     }
 
     @Override
